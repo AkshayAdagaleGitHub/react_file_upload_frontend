@@ -6,6 +6,17 @@
   height: 40vmin;
   pointer-events: none;
 }
+form {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  border-radius: 20px;
+  border-spacing: 0px;
+  margin: 15px 50px 75px 50px;
+  border-style: solid;
+  border-color: #282c34;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

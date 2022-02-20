@@ -3,10 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import NavigationBar from './components/navbar';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Upload from './components/upload';
+// import {  BrowserRouter,  Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import NotFoundPage from './components/pagenotfound'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <NavigationBar/>
+      <Upload/>
+        <Routes>
+          <Route exact path="/" component={App} />
+            <Route path="/upload" component={Upload} />     
+            <Route component={NotFoundPage} />     
+          </Routes>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
