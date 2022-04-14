@@ -14,6 +14,21 @@ const Upload = () => {
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
   
+    // const [width, setWidth] = useState<number>(window.innerWidth);
+
+    // function handleWindowSizeChange() {
+    //     setWidth(window.innerWidth);
+    // }
+
+    // useEffect(() => {
+    //     window.addEventListener('resize', handleWindowSizeChange);
+    //     return () => {
+    //         window.removeEventListener('resize', handleWindowSizeChange);
+    //     }
+    // }, []);
+
+    // const isMobile = width <= 768;
+
     const onClickUploadProfilePic = e => {
         setUploadProfilePic(e.target.files[0])
     };
@@ -155,7 +170,7 @@ const Upload = () => {
                 </Form.Group>
               </Col>
           </Row> */}
-            <Row>
+            <Row>  
               <Col>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Email address</Form.Label>
